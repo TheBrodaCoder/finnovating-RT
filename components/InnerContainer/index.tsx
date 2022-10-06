@@ -6,7 +6,7 @@ const InnerContainer = (props: StackProps) => {
     <Stack
       w="full"
       h="full"
-      flexDirection="column"
+      direction="column"
       align="center"
       justify="center"
       maxW="1140px"

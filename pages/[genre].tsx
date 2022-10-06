@@ -15,19 +15,24 @@ const Genre = () => {
   const { genre } = router.query;
 
   return (
-    <MainContainer>
+    <MainContainer minH={{ base: "initial", md: "100%" }}>
       <Head>
         <title>Discover animes about {`${genre}`}</title>
         <meta name="description" content="A random anime suggester" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <InnerContainer>
+      <InnerContainer
+        direction={{ base: "column-reverse", md: "row" }}
+        py={{ base: 20, md: 0 }}
+      >
         <Stack
           direction={{ base: "column", md: "row" }}
           w="full"
-          py="20"
+          px={{ base: 8, md: 0 }}
+          py={{ base: 8, md: 0 }}
           justify="center"
           align="center"
+          spacing={{ base: 8, md: 4 }}
         >
           {loading ? (
             <>
@@ -40,11 +45,14 @@ const Genre = () => {
           )}
         </Stack>
         <HStack
-          w="full"
+          w={{ base: "full", md: "initial" }}
           justify="center"
           spacing={6}
-          position={{ md: "absolute" }}
-          top="10"
+          position={{ base: "fixed", md: "absolute" }}
+          top={{ base: 0, md: 10 }}
+          bg={{ base: "whiteAlpha.300", md: "initial" }}
+          py={{ base: 4, md: 0 }}
+          backdropFilter="blur(10px)"
         >
           <Button variant="genreButton">
             <Link href="/">Go back!</Link>

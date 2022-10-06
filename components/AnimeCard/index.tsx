@@ -19,6 +19,7 @@ const AnimeCard = ({ cardData }: { cardData: MediaElement }) => {
       transition="height 1s ease"
       onMouseOver={() => setCardHovered(true)}
       onMouseLeave={() => setCardHovered(false)}
+      onClick={() => setCardHovered(!cardHovered)}
     >
       <Center h="300px" w="full" position="relative" bg="whiteAlpha.200" p="4">
         <Box position="absolute" w="100%" h="100%">

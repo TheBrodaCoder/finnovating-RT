@@ -33,9 +33,9 @@ const Home = ({ genres }: { genres: string[] }) => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <MainContainer>
-        <InnerContainer>
-          <Heading>What is your mood today?</Heading>
+      <MainContainer h="full">
+        <InnerContainer px={8} align="center">
+          <Heading textAlign="center">What is your mood today?</Heading>
           <Wrap w="full" justify="center">
             {genres.map((genre) => (
               <Link key={genre} href={`/${genre}`}>
