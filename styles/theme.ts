@@ -21,6 +21,7 @@ const theme = extendTheme({
       "html, body, #__next": {
         h: "100%",
         minHeight: "100%",
+        color: "white",
       },
     },
   },
